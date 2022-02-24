@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Casayuda</string>
+
+    <!--NearbyWorkersActivity-->
+    <string name="nearby_title">Workers near me</string>
+    <string name="worker_name">Full name</string>
+    <string name="price_per_hour">Price (€)</string>
+    <string name="worker_services">Services</string>
+
+    <!--MakeRequestActivity-->
+    <string name="request_title">New Request</string>
+    <string name="selected_date_title">Select a date</string>
+    <string name="selected_date_hour">Determine a time</string>
+    <string name="date_placeholder">YYYY-MM-DD</string>
+    <string name="hour_placeholder">HH:mm</string>
+    <string name="set_hour_button">Set Hour</string>
+    <string name="set_date_button">Set Date</string>
+    <string name="create_button">Create</string>
+
+    <string name="worker_details">Worker Details</string>
+    <string name="name">Pepe</string>
+    <string name="surname">De Pura</string>
+    <string name="services">Gardener, escort</string>
+    <string name="price">200€/hour</string>
+    <!-- <string name="hired">Previously hired</string> -->
+    <string name="hire">Hire</string>
+    <string name="comments">Comments</string>
+    <string name="new_comment">New Comment</string>
+    <string name="comment">Comment</string>
+    <string name="hint_comment">Comment here</string>
+    <string name="Close">Close</string>
+    <string name="About">About</string>
+    <string name="aboutDevelopers">blablabla... bliblibli... Play Store... Contact us... blablablablablablablablabla... Byebye.</string>
+    <string name="about_2">Other recommended apps!</string>
+    <string name="hireCommet">Don´t forget to give more info</string>
+
+    <string name="title_activity_location_chooser">LocationChooserActivity</string>
+
+
+    <string-array name="profesions_array">
+        <item>Cleaning</item>
+        <item>Kitchen</item>
+        <item>Plumbing</item>
+        <item>Electricity</item>
+        <item>Baby-sitter</item>
+        <item>Dependent care</item>
+    </string-array>
+
+</resources>

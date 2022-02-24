@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.nearbyworker.NearbyWorkersActivity">
+
+    <!-- tools:srcCompat="@tools:sample/backgrounds/scenic" /> -->
+    <RelativeLayout
+        android:id="@+id/progress_layout"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="100dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!--progress bar implementation-->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circular_shape"
+            android:indeterminate="false"
+            android:progressDrawable="@drawable/circular_progress_bar"
+            android:textAlignment="center" />
+
+        <!--Text implementation in center of the progress bar-->
+        <TextView
+            android:id="@+id/progress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="---"
+            android:textColor="@color/grey"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/nearby_workers_bg1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.459"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nearbyWorkersRecyclerView"
+        app:srcCompat="@drawable/nearby_workers_city_white_background" />
+
+    <ImageView
+        android:id="@+id/nearby_workers_bg2"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="125dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/nearby_workers_bg1"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/nearby_workers_bg1"
+        app:layout_constraintTop_toTopOf="@+id/nearby_workers_bg1"
+        app:srcCompat="@drawable/nearby_workers_map_icon" />
+
+    <TextView
+        android:id="@+id/nearby_workers_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/nearby_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/worker_name"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/worker_name"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/nearbyWorkersRecyclerView"
+        app:layout_constraintStart_toStartOf="@+id/nearbyWorkersRecyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/nearby_workers_title" />
+
+    <TextView
+        android:id="@+id/worker_price"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/price_per_hour"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/nearbyWorkersRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/worker_services"
+        app:layout_constraintStart_toStartOf="@+id/worker_name"
+        app:layout_constraintTop_toBottomOf="@+id/nearby_workers_title" />
+
+    <TextView
+        android:id="@+id/worker_services"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/worker_services"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/nearbyWorkersRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/nearbyWorkersRecyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/nearby_workers_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/nearbyWorkersRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nearby_workers_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

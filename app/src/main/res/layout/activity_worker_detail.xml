@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#57737070"
+    tools:context=".screens.nearbyworker.WorkerDetailActivity">
+
+
+    <TextView
+        android:id="@+id/surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/surname"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/name"
+        app:layout_constraintTop_toBottomOf="@+id/services" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/name"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/services" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/price"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/services"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/services"
+        android:textAlignment="center"
+        android:textColor="@color/material_on_background_emphasis_high_type"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/comments2" />
+
+    <RatingBar
+        android:id="@+id/rating"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="99dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:progressBackgroundTint="@color/gold"
+        android:progressTint="@color/gold"
+        android:stepSize="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price" />
+
+    <ScrollView
+        android:layout_width="403dp"
+        android:layout_height="508dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hire_button">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="537dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="1dp">
+
+
+            <TextView
+                android:id="@+id/comments"
+                android:layout_width="330dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/comments"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/worker_detail_recycler_view"
+                android:layout_width="358dp"
+                android:layout_height="293dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/comments" />
+
+            <TextView
+                android:id="@+id/new_comment_title"
+                android:layout_width="330dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/new_comment"
+                android:textAlignment="center"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/worker_detail_recycler_view" />
+
+            <EditText
+                android:id="@+id/workerCommentTextView"
+                android:layout_width="328dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="36dp"
+                android:hint="@string/hint_comment"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_comment_title" />
+
+            <Button
+                android:id="@+id/worker_comment_button"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="120dp"
+                android:layout_height="41dp"
+                android:text="@string/comment"
+                android:textColor="@color/casayuda_primaryDark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.88"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/workerCommentTextView"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <RatingBar
+                android:id="@+id/workerCommentRatingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="12dp"
+                android:isIndicator="false"
+                android:numStars="5"
+                android:progressBackgroundTint="@color/gold"
+                android:progressTint="@color/gold"
+                android:stepSize="0.1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/workerCommentTextView"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/hire_button"
+        android:layout_width="146dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="152dp"
+        android:text="@string/hire"
+        android:textColor="@color/casayuda_primaryDark"
+        app:iconTint="@color/gold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintStart_toEndOf="@+id/price"
+        app:layout_constraintTop_toTopOf="parent"
+        style="?attr/materialButtonOutlinedStyle"/>
+
+    <TextView
+        android:id="@+id/previuslyHireTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:textColor="@color/cardview_shadow_start_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toEndOf="@+id/surname"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/comments2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/worker_details"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

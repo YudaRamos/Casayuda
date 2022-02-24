@@ -1,0 +1,21 @@
+[
+  {
+    "user_id": 2,
+    "name": "Wolfgang",
+    "surname": "Amadeus",
+    "jobs": [
+      "cooker",
+      "plumber"
+    ],
+    "price_per_hour": 18000
+  },
+  {
+    "user_id": 11,
+    "name": "Johan",
+    "surname": "Sebastian",
+    "jobs": [
+      "electrician"
+    ],
+    "price_per_hour": 11500
+  }
+]

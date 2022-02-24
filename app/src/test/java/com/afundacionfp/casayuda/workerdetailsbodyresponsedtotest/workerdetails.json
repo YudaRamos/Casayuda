@@ -1,0 +1,33 @@
+{
+  "user_id": 2,
+  "name": "Wolfgang",
+  "surname": "Amadeus",
+  "jobs": [
+    "cooker",
+    "plumber"
+  ],
+  "price_per_hour": 18000,
+  "hired_before": [
+    {
+      "datetime": "2019-07-21T17:30:00Z",
+      "hirer_id": 3,
+      "is_accepted": true
+    },
+    {
+      "datetime": "2021-01-09T10:00:00Z",
+      "hirer_id": 3,
+      "is_accepted": false
+    }
+  ],
+  "comments": [
+    {
+      "author_name": "Deadpool",
+      "rating": 2,
+      "comment": "Me dejó la casa hecha un desastre..."
+    },
+    {
+      "author_name": "Lobezno",
+      "rating": 4
+    }
+  ]
+}
